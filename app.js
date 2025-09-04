@@ -66,7 +66,7 @@ function cameraToSrc(cam) {
 
 // Lấy plantId từ URL (mặc định Node_1)
 const qs = new URLSearchParams(location.search);
-const plantId = qs.get("plantId") || "Node_1";
+const plantId = qs.get("plantId") || "Node_2";
 $("plantIdChip")?.replaceChildren(document.createTextNode(`plantId: ${plantId}`));
 
 // ================== LIVE SENSOR ==================
