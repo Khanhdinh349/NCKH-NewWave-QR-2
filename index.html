@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Plant Live Status</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="appbar">
+    <div class="inner">
+      <h1>Plant Live Status</h1>
+      <div class="chip" id="plantIdChip">plantId: —</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <!-- Ảnh -->
+      <article class="card">
+        <h3>Hình ảnh hiện tại</h3>
+        <div class="img-wrap">
+          <img id="plantImage" alt="Plant snapshot" class="hidden"/>
+        </div>
+        <div class="sub" id="imgUpdated">Đang chờ ảnh…</div>
+        <!-- <div class="row">
+          <button class="btn" id="btnRefresh" type="button">Làm mới QR</button>
+        </div> -->
+      </article>
+
+      <!-- Thông tin + Trạng thái -->
+      <article class="card">
+        <h3>Thông tin & Trạng thái</h3>
+        <ul class="info">
+          <li><span>Nhiệt độ</span><b><span id="tempVal">—</span> °C</b></li>
+          <li><span>Độ ẩm</span><b><span id="humVal">—</span> %</b></li>
+          <li><span>Độ ẩm đất</span><b><span id="soilVal">—</span> %</b></li>
+          <li><span>C. biến ánh sáng</span><b><span id="lightVal">—</span></b></li>
+        </ul>
+
+        <!-- <h4>QR để mở trang này</h4>
+        <div id="qrcode" class="qrcode"></div>
+        <div id="qrStatus" class="sub"></div> -->
+
+        <div class="meta">
+          <span>Cập nhật gần nhất: <b id="lastUpdated">—</b></span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Thư viện QR (phải có trước app.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Ứng dụng -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
